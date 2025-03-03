@@ -1,5 +1,5 @@
 /build
-/cmake-build-*
+/cmake-build*
 /.idea
 doc.pdf
 homework.zip

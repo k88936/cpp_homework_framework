@@ -10,4 +10,5 @@ include_directories(include)
 
 enable_testing()
 add_subdirectory(tests)
-add_subdirectory(application)
+add_subdirectory(console_application)
+add_subdirectory(gui_application)
