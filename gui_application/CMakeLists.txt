@@ -13,7 +13,13 @@ find_package(Qt6 COMPONENTS
         Widgets
         REQUIRED)
 
-add_executable(${PROJECT_NAME} main.cpp)
+add_executable(${PROJECT_NAME} main.cpp
+        TextEditStreamBuf.cpp
+        TextEditStreamBuf.h
+        mywidget.cpp
+        mywidget.h
+        mywidget.ui
+)
 target_link_libraries(${PROJECT_NAME}
         homework
         Qt::Core

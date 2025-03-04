@@ -1,6 +1,6 @@
 #include <algorithm>
 #include <iostream>
-#include "lib.h"
+#include "lib.cpp"
 #include "utils.h"
 
 //

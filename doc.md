@@ -1,6 +1,7 @@
 # Building
 ## console application
 ### build
+> 吐槽一下windows上构建工具用默认的msvc的话cmake --build竟然生成的是vs的工程文件，而不是直接编译.
 ```shell
 cmake -G Ninja -S . -B build
 cmake --build build
@@ -18,14 +19,14 @@ ctest --test-dir build
 
 ## gui application 
 ### build (for windows) 
-> note: replace with your Qt path
+> note:替换为你的Qt install path
 ```shell
-cmake -G Ninja -S . -B build -DGUI_APPLICATION=ON -DCMAKE_TOOLCHAIN_FILE=C:\Qt\6.8.2\mingw_64\lib\cmake\Qt6\qt.toolchain.cmake
+cmake -G Ninja -S . -B build -DGUI_APPLICATION=ON -DCMAKE_TOOLCHAIN_FILE=C:\Qt\6.8.2\msvc2022_64\lib\cmake\Qt6\qt.toolchain.cmake
 cmake --build build
-C:\Qt\6.8.2\mingw_64\bin\windeployqt6.exe build/gui_application/gui_application.exe
+C:\Qt\6.8.2\msvc2022_64\bin\windeployqt6.exe build/gui_application/gui_application.exe
 ```
-or use Qtcreator, remember to turn on GUI_APPLICATION option
-### build (for archlinux)
+or 使用 Qtcreator ,启用cmake option: GUI_APPLICATION
+### build (for linux)
 ```shell
 cmake -S . -B build -DGUI_APPILCATION=ON
 cmake --build build
@@ -34,6 +35,4 @@ cmake --build build
 ```shell
 ./build/gui_application/gui_application
 ```
-
-
 
