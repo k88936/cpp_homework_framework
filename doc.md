@@ -35,4 +35,5 @@ cmake --build build
 ```shell
 ./build/gui_application/gui_application
 ```
-
+# 文档说明
+观感建议顺序 markdown 编辑器 > html > pdf
