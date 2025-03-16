@@ -2,6 +2,7 @@
 /cmake-build*
 /.idea
 doc.pdf
+doc.html
 homework.zip
 homework.tar
 CMakeLists.txt.user
