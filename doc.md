@@ -21,9 +21,10 @@ ctest --test-dir build
 ### build (for windows) 
 > note:替换为你的Qt install path
 ```shell
-cmake -G Ninja -S . -B build -DGUI_APPLICATION=ON -DCMAKE_TOOLCHAIN_FILE=C:\Qt\6.8.2\msvc2022_64\lib\cmake\Qt6\qt.toolchain.cmake
+$$env:QT_INSTALL_PATH="C:\Qt\6.8.2\msvc2022_64"
+cmake -G Ninja -S . -B build -DGUI_APPLICATION=ON -DCMAKE_TOOLCHAIN_FILE=$QT_INSTALL_PATH\lib\cmake\Qt6\qt.toolchain.cmake
 cmake --build build
-C:\Qt\6.8.2\msvc2022_64\bin\windeployqt6.exe build/gui_application/gui_application.exe
+$QT_INSTALL_PATH\bin\windeployqt6.exe .\build\gui_application\gui_application.exe
 ```
 or 使用 Qtcreator ,启用cmake option: GUI_APPLICATION
 ### build (for linux)
